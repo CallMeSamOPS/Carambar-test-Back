@@ -19,4 +19,4 @@ exports.getRandomJoke = async (req, res) => {
     const jokes = await Joke.findAll();
     const random = jokes[Math.floor(Math.random() * jokes.length)];
     res.json(random);
-}
+};
