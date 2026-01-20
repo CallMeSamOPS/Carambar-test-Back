@@ -3,7 +3,7 @@ const Joke = require('./models/Joke');
 async function seedJokes() {
     const count = await Joke.count();
 
-if (count ==== 0) {
+if (count === 0) {
     await Joke.bulkCreate([
         {
             question: 'Pourquoi les dev...',
