@@ -7,6 +7,8 @@ sequelize.sync().then(() => {
     console.log('Base de donnee connectee');
 
         app.listen(PORT, () => {
-        console.log('Serveur lance sur localhost');
+        console.log(`Serveur lance sur le port ${PORT}`);
     });
+}).catch(err => {
+    console.error('Erreur DB:', err);
 });
