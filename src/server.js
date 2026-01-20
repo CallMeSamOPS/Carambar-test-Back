@@ -1,10 +1,12 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
+const sequelize = require('./config/database');
 
-app.get('/', (req, res) => {
-    res.send('API Carambar OK');
-});
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log('Serveur lance sur localhost');
+sequelize.sync().then(() => {
+    console.log('Base de donnee connectee');
+
+        app.listen(PORT, () => {
+        console.log('Serveur lance sur localhost');
+    });
 });
