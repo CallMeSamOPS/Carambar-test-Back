@@ -12,7 +12,7 @@ const controller = require('../controllers/jokeController');
  *    200:
  *     description: Jokes Created
  */
-router.post('/jokes', controller.createJoke);
+router.post('/', controller.createJoke);
 /**
  * @swagger
  * /api/v1/jokes:
