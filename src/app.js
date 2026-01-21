@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.send('API Carambar OK');
 });
 
-app.use('/api/v1/jokes', jokesRoutes);
+app.use('/api/v1', jokesRoutes);
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
